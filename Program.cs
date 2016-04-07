@@ -14,7 +14,7 @@ namespace ConsoleApplication1
     {
         public abstract long CalcSumGen<T>(T list) where T : IList<long>;
         public abstract long CalcSumNonGen(IList<long> list);
-        public abstract long CalcSumExact(IList<long> list);
+        public abstract long CalcSumExact(List<long> list);
         public abstract long CalcSumExact(long[] list);
     }
 
@@ -42,7 +42,7 @@ namespace ConsoleApplication1
             return sum;
         }
 
-        public override long CalcSumExact(IList<long> list)
+        public override long CalcSumExact(List<long> list)
         {
             long sum = 0;
             for (int i = 0; i < list.Count; i++)
@@ -91,7 +91,7 @@ namespace ConsoleApplication1
 
             return sum;
         }
-        public override long CalcSumExact(IList<long> list)
+        public override long CalcSumExact(List<long> list)
         {
             var count = list.Count;
             long sum = 0;
@@ -138,7 +138,7 @@ namespace ConsoleApplication1
             return sum;
         }
 
-        public override long CalcSumExact(IList<long> list)
+        public override long CalcSumExact(List<long> list)
         {
             long sum = 0;
             foreach (var val in list)
@@ -171,7 +171,7 @@ namespace ConsoleApplication1
             return list.Sum();
         }
 
-        public override long CalcSumExact(IList<long> list)
+        public override long CalcSumExact(List<long> list)
         {
             return list.Sum();
         }
