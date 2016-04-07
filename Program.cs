@@ -18,7 +18,7 @@ namespace ConsoleApplication1
         public abstract long CalcSumExact(long[] list);
     }
 
-    public class InlineCountCalculator : Calculator
+    public class InlineSizeCalculator : Calculator
     {
         public override long CalcSumGen<T>(T list)
         {
@@ -202,7 +202,7 @@ namespace ConsoleApplication1
             var testSubjects = new Calculator[]
             {
                 new CachedSizeCalculator(), 
-                new InlineCountCalculator(), 
+                new InlineSizeCalculator(), 
                 new ForeachCalculator(),
                 new LinqCalculator()
             };
